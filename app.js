@@ -3,16 +3,16 @@ import bodyParser from 'body-parser';
 import { Cosmos } from "@cosmostation/cosmosjs";
 import message from "@cosmostation/cosmosjs/src/messages/proto.js";
 let config = {
-    "mnemonic": process.env.MNEMONIC,
-    "chainId":process.env.CHAIN_ID,
-    "lcdUrl": process.env.LCD_URL,
-    "denom": process.env.DENOM,
-    "prefix": process.env.ADD_PREFIX,
-    "feeAmount": process.env.FEES,
-    "AmountSend": process.env.AMOUNT,
-    "memo": process.env.MEMO,
-    "port": process.env.PORT,
-    "gasLimit":process.env.GAS_LIMIT
+    "mnemonic": process.env.MNEMONIC || "barrel essay fish shift size want lottery patient reward common long cancel train cargo impact moment supreme lumber cigar tube glue margin balance bargain",
+    "chainId":process.env.CHAIN_ID || "elesto",
+    "lcdUrl": process.env.LCD_URL || "http://localhost:1317" ,
+    "denom": process.env.DENOM || "uelesto",
+    "prefix": process.env.ADD_PREFIX || "elesto",
+    "feeAmount": process.env.FEES || 500,
+    "AmountSend": process.env.AMOUNT || 1000000,
+    "memo": process.env.MEMO || "",
+    "port": process.env.PORT || 4500,
+    "gasLimit":process.env.GAS_LIMIT || 200000
 }
 
 // Cosmos config
