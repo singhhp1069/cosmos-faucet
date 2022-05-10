@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Cosmos } from "@cosmostation/cosmosjs";
+import cors from 'cors';
 import message from "@cosmostation/cosmosjs/src/messages/proto.js";
 let config = {
     "mnemonic": process.env.MNEMONIC || "barrel essay fish shift size want lottery patient reward common long cancel train cargo impact moment supreme lumber cigar tube glue margin balance bargain",
@@ -29,6 +30,7 @@ const pubKeyAny = cosmos.getPubKeyAny(privKey);
 
 // Express config
 const app = express()
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 function sendTx(addressTo,res) {
